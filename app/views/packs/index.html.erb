@@ -16,11 +16,7 @@
   </tr>
   <% @packs.each do |pack| %>
     <tr>
-      <td>
-        <a href="/packs/<%= pack.id %>">
-          <%= pack.title %>
-        </a>
-      </td>
+      <td><%= link_to pack.title, pack_path(pack) %></td>
       <td><%= pack.songs %></td>
       <td><%= pack.stepartists %></td>
       <td><%= pack.minlvl_target %>-<%= pack.maxlvl_target %></td>
