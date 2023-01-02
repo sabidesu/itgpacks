@@ -1,0 +1,125 @@
+<%= form_with model: pack do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% pack.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :download_link %><br>
+    <%= form.url_field :download_link %>
+    <% pack.errors.full_messages_for(:download_link).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :songs %><br>
+    <%= form.number_field :songs %>
+    <% pack.errors.full_messages_for(:songs).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :stepartists %><br>
+    <%= form.text_field :stepartists %>
+    <% pack.errors.full_messages_for(:stepartists).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :minlvl_target %><br>
+    <%= form.number_field :minlvl_target %>
+    <% pack.errors.full_messages_for(:minlvl_target).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :maxlvl_target %><br>
+    <%= form.number_field :maxlvl_target %>
+    <% pack.errors.full_messages_for(:maxlvl_target).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :minlvl_total %><br>
+    <%= form.number_field :minlvl_total %>
+    <% pack.errors.full_messages_for(:minlvl_total).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :maxlvl_total %><br>
+    <%= form.number_field :maxlvl_total %>
+    <% pack.errors.full_messages_for(:maxlvl_total).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :bpm_min %><br>
+    <%= form.number_field :bpm_min %>
+    <% pack.errors.full_messages_for(:bpm_min).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :bpm_max %><br>
+    <%= form.number_field :bpm_max %>
+    <% pack.errors.full_messages_for(:bpm_max).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :difficulties_min %><br>
+    <%= form.number_field :difficulties_min %>
+    <% pack.errors.full_messages_for(:difficulties_min).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :difficulties_max %><br>
+    <%= form.number_field :difficulties_max %>
+    <% pack.errors.full_messages_for(:difficulties_max).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :play_type %><br>
+    <%= form.number_field :play_type %>
+    <% pack.errors.full_messages_for(:play_type).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :play_format %><br>
+    <%= form.number_field :play_format %>
+    <% pack.errors.full_messages_for(:play_format).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :ranked %><br>
+    <%= form.check_box :ranked %>
+    <% pack.errors.full_messages_for(:ranked).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
