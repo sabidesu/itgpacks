@@ -1,4 +1,6 @@
 class Pack < ApplicationRecord
+  has_many :songs
+
   validates :title, presence: true
   validates :download_link, presence: true
   validates :songs, numericality: { only_integer: true }
