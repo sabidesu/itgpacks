@@ -1,0 +1,30 @@
+<h1>packs</h1>
+
+<h2><%= @pack.title %></h2>
+
+<table>
+  <tr>
+    <th>songs</th>
+    <th>stepartists</th>
+    <th>minmax lvl (target)</th>
+    <th>minmax lvl (total)</th>
+    <th>BPM</th>
+    <th>difficulties</th>
+    <th>type</th>
+    <th>format</th>
+    <th>groovestats ranked</th>
+    <th>download</th>
+  </tr>
+  <tr>
+    <td><%= @pack.songs %></td>
+    <td><%= @pack.stepartists %></td>
+    <td><%= @pack.minlvl_target %>-<%= @pack.maxlvl_target %></td>
+    <td><%= @pack.minlvl_total %>-<%= @pack.maxlvl_total %></td>
+    <td><%= @pack.bpm_min %>-<%= @pack.bpm_max %></td>
+    <td><%= @pack.difficulties_min %><% if @pack.difficulties_max %>-<%= @pack.difficulties_max %><% end %></td>
+    <td><%= @pack.play_type %></td>
+    <td><%= @pack.play_format %></td>
+    <td><%= @pack.ranked %></td>
+    <td><%= link_to 'download', @pack.download %>
+  </tr>
+</table>
