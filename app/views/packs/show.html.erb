@@ -34,3 +34,63 @@
 <%= link_to "edit pack", edit_pack_path(@pack) %>
 
 <%= link_to "delete pack", pack_path(@pack), data: { turbo_method: :delete, turbo_confirm: "are you sure?" } %>
+
+<h3>add song data</h3>
+<%= form_with model: [ @pack, @pack.songs.build ] do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :artist %><br>
+    <%= form.text_field :artist %>
+  </div>
+
+  <div>
+    <%= form.label :stepartist %><br>
+    <%= form.text_field :stepartist %>
+  </div>
+
+  <div>
+    <%= form.label :bpm %><br>
+    <%= form.number_field :bpm %>
+  </div>
+
+  <div>
+    <%= form.label :length %><br>
+    <%= form.number_field :length %>
+  </div>
+
+  <div>
+    <%= form.label :novice %><br>
+    <%= form.number_field :novice %>
+  </div>
+
+  <div>
+    <%= form.label :easy %><br>
+    <%= form.number_field :easy %>
+  </div>
+
+  <div>
+    <%= form.label :medium %><br>
+    <%= form.number_field :medium %>
+  </div>
+
+  <div>
+    <%= form.label :hard %><br>
+    <%= form.number_field :hard %>
+  </div>
+
+  <div>
+    <%= form.label :expert %><br>
+    <%= form.number_field :expert %>
+  </div>
+
+  <div>
+    <%= form.label :edit %><br>
+    <%= form.number_field :edit %>
+  </div>
+
+  <div><%= from.submit %></div>
+<% end %>
