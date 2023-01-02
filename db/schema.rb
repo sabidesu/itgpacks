@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_02_085536) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_02_203744) do
   create_table "packs", force: :cascade do |t|
     t.string "title"
     t.string "download_link"
@@ -31,4 +31,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_02_085536) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "songs", force: :cascade do |t|
+    t.string "title"
+    t.string "artist"
+    t.integer "bpm"
+    t.integer "length"
+    t.string "stepartist"
+    t.integer "novice"
+    t.integer "easy"
+    t.integer "medium"
+    t.integer "hard"
+    t.integer "expert"
+    t.integer "edit"
+    t.integer "pack_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pack_id"], name: "index_songs_on_pack_id"
+  end
+
+  add_foreign_key "songs", "packs"
 end
