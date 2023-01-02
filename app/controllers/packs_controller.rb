@@ -35,6 +35,13 @@ class PacksController < ApplicationController
     end
   end
 
+  def destroy
+    @pack = Pack.find(params[:id])
+    @pack.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   private
     def pack_params
       params.require(:pack).permit(:title, :download_link, :songs, :stepartists, :minlvl_target, :maxlvl_target, :minlvl_total, :maxlvl_total, :bpm_min, :bpm_max, :difficulties_min, :difficulties_max, :play_type, :play_format, :ranked)

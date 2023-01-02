@@ -31,4 +31,6 @@
   </tr>
 </table>
 
-<%= link_to "edit", edit_pack_path(@pack) %>
+<%= link_to "edit pack", edit_pack_path(@pack) %>
+
+<%= link_to "delete pack", pack_path(@pack), data: { turbo_method: :delete, turbo_confirm: "are you sure?" } %>
