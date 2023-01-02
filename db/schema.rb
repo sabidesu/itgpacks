@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_01_02_085536) do
   create_table "packs", force: :cascade do |t|
     t.string "title"
+    t.string "download"
     t.integer "songs"
     t.string "stepartists"
     t.integer "minlvl_target"
@@ -23,9 +24,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_02_085536) do
     t.integer "bpm_max"
     t.integer "difficulties_min"
     t.integer "difficulties_max"
-    t.integer "type"
+    t.integer "play_type"
+    t.integer "play_format"
     t.boolean "ranked"
-    t.string "download"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
