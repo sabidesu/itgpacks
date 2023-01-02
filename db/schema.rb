@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_01_02_085536) do
   create_table "packs", force: :cascade do |t|
     t.string "title"
-    t.string "download"
+    t.string "download_link"
     t.integer "songs"
     t.string "stepartists"
     t.integer "minlvl_target"

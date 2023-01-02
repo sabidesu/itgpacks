@@ -2,7 +2,7 @@ class CreatePacks < ActiveRecord::Migration[7.0]
   def change
     create_table :packs do |t|
       t.string :title
-      t.string :download
+      t.string :download_link
       t.integer :songs
       t.string :stepartists
       t.integer :minlvl_target
