@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  songs: 1
+  stepartists: MyString
+  minlvl_target: 1
+  maxlvl_target: 1
+  minlvl_total: 1
+  maxlvl_total: 1
+  bpm_min: 1
+  bpm_max: 1
+  difficulties_min: 1
+  difficulties_max: 1
+  type: 1
+  ranked: false
+
+two:
+  title: MyString
+  songs: 1
+  stepartists: MyString
+  minlvl_target: 1
+  maxlvl_target: 1
+  minlvl_total: 1
+  maxlvl_total: 1
+  bpm_min: 1
+  bpm_max: 1
+  difficulties_min: 1
+  difficulties_max: 1
+  type: 1
+  ranked: false
