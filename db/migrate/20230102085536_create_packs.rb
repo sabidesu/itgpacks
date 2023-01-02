@@ -14,6 +14,7 @@ class CreatePacks < ActiveRecord::Migration[7.0]
       t.integer :difficulties_max
       t.integer :type
       t.boolean :ranked
+      t.string :download
 
       t.timestamps
     end
