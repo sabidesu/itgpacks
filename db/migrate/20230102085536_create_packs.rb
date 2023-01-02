@@ -3,7 +3,7 @@ class CreatePacks < ActiveRecord::Migration[7.0]
     create_table :packs do |t|
       t.string :title
       t.string :download_link
-      t.integer :songs
+      t.integer :song_amount
       t.string :stepartists
       t.integer :minlvl_target
       t.integer :maxlvl_target

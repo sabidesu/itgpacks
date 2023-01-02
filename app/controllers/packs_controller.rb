@@ -44,6 +44,6 @@ class PacksController < ApplicationController
 
   private
     def pack_params
-      params.require(:pack).permit(:title, :download_link, :songs, :stepartists, :minlvl_target, :maxlvl_target, :minlvl_total, :maxlvl_total, :bpm_min, :bpm_max, :difficulties_min, :difficulties_max, :play_type, :play_format, :ranked)
+      params.require(:pack).permit(:title, :download_link, :song_amount, :stepartists, :minlvl_target, :maxlvl_target, :minlvl_total, :maxlvl_total, :bpm_min, :bpm_max, :difficulties_min, :difficulties_max, :play_type, :play_format, :ranked)
     end
 end

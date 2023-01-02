@@ -3,7 +3,7 @@ class Pack < ApplicationRecord
 
   validates :title, presence: true
   validates :download_link, presence: true
-  validates :songs, numericality: { only_integer: true }
+  validates :song_amount, numericality: { only_integer: true }
   validates :stepartists, presence: true
   validates :minlvl_target, numericality: { only_integer: true }
   validates :maxlvl_target, numericality: { only_integer: true }

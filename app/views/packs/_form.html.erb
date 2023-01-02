@@ -16,9 +16,9 @@
   </div>
 
   <div>
-    <%= form.label :songs %><br>
-    <%= form.number_field :songs %>
-    <% pack.errors.full_messages_for(:songs).each do |message| %>
+    <%= form.label :song_amount %><br>
+    <%= form.number_field :song_amount %>
+    <% pack.errors.full_messages_for(:song_amount).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
