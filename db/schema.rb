@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_02_085536) do
     t.integer "difficulties_max"
     t.integer "type"
     t.boolean "ranked"
+    t.string "download"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
