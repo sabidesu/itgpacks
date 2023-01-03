@@ -18,7 +18,7 @@
     <th>download</th>
   </tr>
   <tr>
-    <td><%= @pack.songs %></td>
+    <td><%= @pack.song_amount %></td>
     <td><%= @pack.stepartists %></td>
     <td><%= @pack.minlvl_target %>-<%= @pack.maxlvl_target %></td>
     <td><%= @pack.minlvl_total %>-<%= @pack.maxlvl_total %></td>
@@ -36,10 +36,59 @@
 <%= link_to "delete pack", pack_path(@pack), data: { turbo_method: :delete, turbo_confirm: "are you sure?" } %>
 
 <h3>songs</h3>
+
 <table>
+  <tr>
+    <th>title</th>
+    <th>artist</th>
+    <th>bpm</th>
+    <th>length</th>
+    <th>stepartist</th>
+    <% unless @pack.play_format == 1 %>
+      <th>SN</th>
+      <th>SE</th>
+      <th>SM</th>
+      <th>SH</th>
+      <th>SX</th>
+      <th>SEdit</th>
+    <% end %>
+    <% unless @pack.play_format == 0 %>
+      <th>DN</th>
+      <th>DE</th>
+      <th>DM</th>
+      <th>DH</th>
+      <th>DX</th>
+      <th>DEdit</th>
+    <% end %>
+  </tr>
+  <% @pack.songs.each do |song| %>
+    <tr>
+      <td><%= song.title %></td>
+      <td><%= song.artist %></td>
+      <td><%= song.bpm %></td>
+      <td><%= song.length %></td>
+      <td><%= song.stepartist %></td>
+      <% unless @pack.play_format == 1 %>
+        <td><%= song.single_novice %></td>
+        <td><%= song.single_easy %></td>
+        <td><%= song.single_medium %></td>
+        <td><%= song.single_hard %></td>
+        <td><%= song.single_expert %></td>
+        <td><%= song.single_edit %></td>
+      <% end %>
+      <% unless @pack.play_format == 0 %>
+        <td><%= song.double_novice %></td>
+        <td><%= song.double_easy %></td>
+        <td><%= song.double_medium %></td>
+        <td><%= song.double_hard %></td>
+        <td><%= song.double_expert %></td>
+        <td><%= song.double_edit %></td>
+      <% end %>
+    </tr>
+  <% end %>
 </table>
 
-<h3>add song data</h3>
+<h4>add song data</h4>
 <%= form_with model: [ @pack, @pack.songs.build ] do |form| %>
   <div>
     <%= form.label :title %><br>
@@ -52,11 +101,6 @@
   </div>
 
   <div>
-    <%= form.label :stepartist %><br>
-    <%= form.text_field :stepartist %>
-  </div>
-
-  <div>
     <%= form.label :bpm %><br>
     <%= form.number_field :bpm %>
   </div>
@@ -64,6 +108,11 @@
   <div>
     <%= form.label :length %><br>
     <%= form.number_field :length %>
+  </div>
+
+  <div>
+    <%= form.label :stepartist %><br>
+    <%= form.text_field :stepartist %>
   </div>
 
   <div>
